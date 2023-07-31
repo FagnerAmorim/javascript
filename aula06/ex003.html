@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro progama...</title>
+    <style>
+        body {
+            background-color: rgb(18, 18, 179);
+            color: white;  /* Cmentário em CSS */
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: rgb(250, 250, 32);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1> <!-- Isso é um comentário -->
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Digite um número: ')) //string
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: ')) //string
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // O símbolo + pode servir para concatenação (string + string)
+        // O símbolo + pode servir para adição (number + number) 
+        // para converter o type de string pra number é necessário converter com o código Number (somente ele faz as duas funções abaixo) Number.parseInt (para números inteiros) e Number.parseFloat (para números reais)
+        // para converter de number para string tem dois types: String(n) ou n.toString()
+        //E a forma moderna de codificar o type é usando template string ${s}
+    </script>
+</body>
+</html>
