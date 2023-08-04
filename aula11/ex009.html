@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é Estrangeiro?</title>
+</head>
+<body>
+    <h1>Você é Estrangeiro?</h1>
+    Estou vivendo em: <input type="text" name="pais" id="pais"> <br>
+    <input type="button" value="Você é?" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        var pais = 'Brasil'
+        function calcular() {
+        var pais = window.document.getElementById('pais')
+        var res = window.document.getElementById('res')
+        var pais = Number(value.pais)
+        res.innerHTML = `Vivendo em ${pais}`
+        if (pais == 'Brasil') {
+                res.innerHTML += 'Você é Brasileiro'
+        } else {
+            res.innerHTML == 'Você é Estrangeiro'
+        }
+        }
+        
+
+    </script>
+</body>
+</html>
