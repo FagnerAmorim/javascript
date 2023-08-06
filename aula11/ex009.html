@@ -6,21 +6,20 @@
     <title>Você é Estrangeiro?</title>
 </head>
 <body>
-    <h1>Você é Estrangeiro?</h1>
-    Estou vivendo em: <input type="text" name="pais" id="pais"> <br>
-    <input type="button" value="Você é?" onclick="calcular()">
+    <h1>Qual país você vive?</h1>
+    <p>Sou Brasileiro, escolha o país onde vou morar e o sistema vai informar se sou Brasileiro ou Estrangeiro...</p>
+    Estou vivendo no(a): <input type="text" name="pais" id="pais"> <br>
+    <input type="button" value="Resultado" onclick="calcular()">
     <div id="res"></div>
     <script>
-        var pais = 'Brasil'
         function calcular() {
-        var pais = window.document.getElementById('pais')
+        var pais = window.document.getElementById('pais').value
         var res = window.document.getElementById('res')
-        var pais = Number(value.pais)
-        res.innerHTML = `Vivendo em ${pais}`
-        if (pais == 'Brasil') {
-                res.innerHTML += 'Você é Brasileiro'
+        res.innerHTML = `${pais}`
+        if (pais=='Brasil') {
+                res.innerHTML += '<br/>Você é Brasileiro'
         } else {
-            res.innerHTML == 'Você é Estrangeiro'
+            res.innerHTML += '<br/>Você é Estrangeiro'
         }
         }
         
