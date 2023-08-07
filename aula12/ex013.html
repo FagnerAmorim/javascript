@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que dia da semana é hoje?</title>
+</head>
+<body>
+    <h1>Dia da semana</h1>
+    <p>Clique aqui embaixo para saber qual dia da semana é hoje.</p>
+    <input type="button" value="Hoje é:" onclick="sem()">
+    <div id="sem"></div>
+
+    <script>
+        function sem() {
+            var sem = new Date()
+            var dia = sem.getDay()
+            sem.innerHTML = `<p>Hoje é ${sem}!<p/>`
+
+    switch(dia) {
+    case 0:
+        sem.innerHTML `Domingo`
+        break
+    case 1:
+        sem.innerHTML `Segunda`
+        break
+    case 2:
+        sem.innerHTML `Terça`
+        break
+    case 3:
+        sem.innerHTML `Quarta`
+        break
+    case 4:
+        sem.innerHTML `Quinta`
+        break
+    case 5:
+        sem.innerHTML `Sexta`
+        break
+    case 6:
+        sem.innerHTML `Sábado`
+        break
+    default:
+        sem.innerHTML `[ERRO] Dia inválido`
+}
+        }
+    </script>
+</body>
+</html>

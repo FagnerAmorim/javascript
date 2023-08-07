@@ -4,6 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horário em Tempo Real</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: linear-gradient(to right, blue, rgb(92, 92, 248));
+        }
+
+        h1 {
+            color: white;
+            font: bolder 35pt arial;
+            text-align: center;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        p {
+            color: aquamarine;
+            font: bold 18pt arial;
+            text-align: center;
+            margin: auto;
+            padding-bottom: 20px ;
+        }
+
+        input {
+            background-color: greenyellow;
+            color: blue;
+            font: bolder 13pt verdana;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: auto;
+            height: 50px;
+            width: 300px;
+        }
+
+        div#horas {
+            color: aquamarine;
+            font: bold 18pt arial;
+            text-align: center;
+            margin: auto;
+            padding-top: 20px;
+            padding-bottom: 10px ;
+        }
+
+    
+    </style>
 </head>
 <body>
     <h1>Que Horas são agora?</h1>
@@ -15,13 +63,13 @@
         function horario() {
             var horario = new Date()
             var hora = horario.getHours()
-            horas.innerHTML = `<p><strong>${Date()}<strong/></p>`
+            horas.innerHTML = `<p><strong>${horario}<strong/></p>`
             if (horario < 12) {
-                Date().innerHTML += `Bom dia!`
+                horas.innerHTML += `Bom dia!`
             } else if (horario <= 18) {
-                Date().innerHTML += `Boa Tarde!`
+                horas.innerHTML += `Boa Tarde!`
             } else {
-                hora.innerHTML += `Boa Noite!`
+                horas.innerHTML += `Boa Noite!`
             }
             
         }
