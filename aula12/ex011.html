@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Eleição</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-image: linear-gradient(to top, rgb(92, 4, 4), rgb(107, 231, 107));
+            background-repeat: no-repeat; 
+            height: 500px;
+            width: 700px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font: normal 40pt Arial;
+        }
+
+        p {
+            font: bolder 20pt times;
+        }
+
+        input {
+            background-color: blue;
+            color: white;
+            height: 30px;
+            width: 200px;
+            font: bolder 20pt arial;
+        }
+
+        div#res {
+            color: red;
+            font: bolder 30pt verdana;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Idade de votação</h1>
+    <p>coloque sua idade no campo abaixo que o sistema informará se você pode ou não votar.</p>
+    <input type="number" name="idade" id="idade" onclick="calcular()">
+    <input type="button" value="Resultado">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var idade = window.document.getElementById('idade').value
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Você tem ${idade} anos.</p>`
+            if (idade < 16) {
+                res.innerHTML += `Você não vota`
+            } else if (idade < 18 || idade > 65) {
+                res.innerHTML += `Voto opcional`
+            } else {
+                res.innerHTML += `Voto obrigatório`
+            }
+
+        }
+    </script>
+</body>
+</html>

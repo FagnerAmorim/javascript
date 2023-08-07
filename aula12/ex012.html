@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário em Tempo Real</title>
+</head>
+<body>
+    <h1>Que Horas são agora?</h1>
+    <p>Horário atualizado em Tempo Real.</p>
+    <input type="button" value="Nesse exato momento são:" onclick="horario()">
+    <div id="horas"></div>
+
+    <script>
+        function horario() {
+            var horario = new Date()
+            var hora = horario.getHours()
+            horas.innerHTML = `<p><strong>${Date()}<strong/></p>`
+            if (horario < 12) {
+                Date().innerHTML += `Bom dia!`
+            } else if (horario <= 18) {
+                Date().innerHTML += `Boa Tarde!`
+            } else {
+                hora.innerHTML += `Boa Noite!`
+            }
+            
+        }
+    </script>
+</body>
+</html>
