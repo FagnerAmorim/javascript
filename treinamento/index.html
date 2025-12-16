@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Pratica de Comandos</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Nome: <strong>${nome}</strong><br>`)
+        var idade = window.prompt('Qual a sua idade?')
+        document.write(`Idade: <strong>${idade}</strong> anos<br>`)
+        var estado_civil = window.prompt('Seu estado Cívil?')
+        document.write(`Estado Cívil: <strong>${estado_civil}</strong><br>`)
+        var profissao = window.prompt('Qual a sua Profissão?')
+        document.write(`Profissão: <strong>${profissao}</strong><br>`)
+        var salario = window.prompt('Qual é o seu salário?')
+        document.write(`Salário: <strong>${salario}</strong><br>`)
+        document.write(`${salario.toFixed(2).replace('.' , ',')}`)
+        document.write(`${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>
